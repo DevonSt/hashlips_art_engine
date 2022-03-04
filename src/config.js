@@ -2,39 +2,44 @@ const basePath = process.cwd();
 const { MODE } = require(`${basePath}/constants/blend_mode.js`);
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 
-const network = NETWORK.eth;
+const network = NETWORK.sol;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = 'MonsterGang';
+const description = 'Remember to replace this description';
+const baseUri = 'ipfs://NewUriToReplace';
 
 const solanaMetadata = {
-  symbol: "YC",
-  seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
-  creators: [
-    {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
-      share: 100,
-    },
-  ],
+    symbol: 'MGGT',
+    seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
+    external_url: 'https://www.monstergang.com',
+    creators: [
+        {
+            address: '7xPbgyUPf7LZr8EPAneBFErcGRqdWyCsLw5YWjW2tQVQ',
+            share: 100,
+        },
+    ],
 };
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
-  {
-    growEditionSizeTo: 5,
-    layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
-    ],
-  },
+    {
+        growEditionSizeTo: 100,
+        layersOrder: [
+            { name: 'Background' },
+            { name: 'SkinColors' },
+            { name: 'Cloth' },
+            { name: 'DressPants' },
+            { name: 'Ear' },
+            { name: 'Eye' },
+            { name: 'Head' },
+            { name: 'Necklaces' },
+            { name: 'Logos' },
+            { name: 'ArmWear' },
+            { name: 'Shoulder' },
+            { name: 'Weapon' },
+        ],
+    },
 ];
 
 const shuffleLayerConfigurations = false;
